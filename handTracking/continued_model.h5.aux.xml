@@ -1,0 +1,27 @@
+<PAMDataset>
+  <Subdataset name="//dense_6/dense_6/kernel">
+    <PAMDataset>
+      <Metadata domain="MULTIDIMENSION">
+        <MDI key="#backend">tensorflow</MDI>
+        <MDI key="#keras_version">2.2.4-tf</MDI>
+        <MDI key="#layer_names">input_3</MDI>
+        <MDI key="block1_conv1#weight_names">block1_conv1/kernel:0block1_conv1/bias:0</MDI>
+        <MDI key="block1_conv2#weight_names">block1_conv2/kernel:0block1_conv2/bias:0</MDI>
+        <MDI key="block2_conv1#weight_names">block2_conv1/kernel:0block2_conv1/bias:0</MDI>
+        <MDI key="block2_conv2#weight_names">block2_conv2/kernel:0block2_conv2/bias:0</MDI>
+        <MDI key="block3_conv1#weight_names">block3_conv1/kernel:0block3_conv1/bias:0</MDI>
+        <MDI key="block3_conv2#weight_names">block3_conv2/kernel:0block3_conv2/bias:0</MDI>
+        <MDI key="block3_conv3#weight_names">block3_conv3/kernel:0block3_conv3/bias:0</MDI>
+        <MDI key="block4_conv1#weight_names">block4_conv1/kernel:0block4_conv1/bias:0</MDI>
+        <MDI key="block4_conv2#weight_names">block4_conv2/kernel:0block4_conv2/bias:0</MDI>
+        <MDI key="block4_conv3#weight_names">block4_conv3/kernel:0block4_conv3/bias:0</MDI>
+        <MDI key="block5_conv1#weight_names">block5_conv1/kernel:0block5_conv1/bias:0</MDI>
+        <MDI key="block5_conv2#weight_names">block5_conv2/kernel:0block5_conv2/bias:0</MDI>
+        <MDI key="block5_conv3#weight_names">block5_conv3/kernel:0block5_conv3/bias:0</MDI>
+        <MDI key="dense_6#weight_names">dense_6/kernel:0dense_6/bias:0</MDI>
+        <MDI key="dense_7#weight_names">dense_7/kernel:0dense_7/bias:0</MDI>
+        <MDI key="dense_8#weight_names">dense_8/kernel:0dense_8/bias:0</MDI>
+      </Metadata>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>
