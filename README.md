@@ -1,14 +1,14 @@
-# AI labs Region Västerbotten
+﻿# AI labs Region Västerbotten
 ## Run in cloud
 This is by far the simplest solution if you just want to run the laborations and get started with Artifical Neural Networks. 
  
 There are a lot of existing cloud solutions to host jupyter notebooks. We have tested two that works very well. 
 
 ### Colabs
-Click [Colabs](https://colab.research.google.com/) then press the github tab and search for RegionVasterbotten  of the labs username click search. Then press one of the notebooks listed below.
+Click [Colabs](https://colab.research.google.com/) then press the github tab and search for RegionVasterbotten of the labs username click search. Then press one of the notebooks listed below.
 
 ### Binder
-Click [Colabs](https://mybinder.org/) then copy and paste the link to this git repository into the textbox and click launch. It will load and install a lot of dependencies so wait a few minutes.
+Click [mybinder](https://mybinder.org/) then copy and paste the link to this git repository into the textbox and click launch. It will load and install a lot of dependencies so wait a few minutes.
 
 
 ## Installation of python enviroment
