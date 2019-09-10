@@ -1,22 +1,23 @@
 import cv2
 import sys
 import time as ti
+import numpy as np
 font = cv2.FONT_HERSHEY_SIMPLEX
 cascPath = sys.argv[1]
 detect_smile=False
-if sys.argv[2]=='smile':
-    detect_smile=True
-    smilepath='./haarcascade_smile.xml'
-    smileCascade = cv2.CascadeClassifier(smilepath)
+if len(sys.argv)>2: 
+    if sys.argv[2]=='smile':
+        detect_smile=True
+        smilepath='./haarcascade_smile.xml'
+        smileCascade = cv2.CascadeClassifier(smilepath)
 
-name = input('What is your name?')
+# name = input('What is your name?')
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 video_capture = cv2.VideoCapture(700)#0 + cv2.CAP_DSHOW)
 print('Vcap:', video_capture, cv2.CAP_DSHOW)
 image_no = 1000
 for i in range(1000):
-    
     video_capture = cv2.VideoCapture(i)
     ret, frame = video_capture.read()
     
@@ -24,8 +25,9 @@ for i in range(1000):
         print('Found camera on ',i)
         break
     video_capture.release()
+
 time_interval = 0.1
-A=ti.time()
+# A=ti.time()
 while True:
     # Capture frame-by-frame
     
@@ -57,20 +59,23 @@ while True:
         x2 = int(faces[0][0]+224)#faces[0][2]))
         y2 = int(faces[0][1]+224)#+faces[0][3])+30)
         faceROI = gray[y1:y2,x1:x2,:].copy()
-        if ti.time()-A > time_interval:
-            print('Saving image no:', image_no)
-            A = ti.time()
-            cv2.imwrite(name+'_'+str(image_no)+'.jpg',faceROI)
-            image_no+=1
+        print(type(faceROI))
+        print(np.shape(faceROI))
+        
+        # if ti.time()-A > time_interval:
+        #    print('Saving image no:', image_no)
+        #    A = ti.time()
+        #    cv2.imwrite(name+'_'+str(image_no)+'.jpg',faceROI)
+        #    image_no+=1
         #gray[0:250, 0:200] = 0
-        smiles=[]
-        if detect_smile==True:
-            smiles = smileCascade.detectMultiScale(
-                faceROI,
-                scaleFactor=1.1,
-                minNeighbors=22,
-                minSize=(30, 30)
-            )
+        # smiles=[]
+        #if detect_smile==True:
+        #    smiles = smileCascade.detectMultiScale(
+        #        faceROI,
+        #        scaleFactor=1.1,
+        #        minNeighbors=22,
+        #        minSize=(30, 30)
+        #    )
         
         #if faceROI.shape[0]>250 or faceROI.shape[1]>200:
         #    print('large image')
@@ -94,10 +99,9 @@ while True:
         cv2.rectangle(gray, (x, y), (x+224, y+224), (0, 255, 0), 2)
     
     # Display the resulting frame
-    
-    cv2.putText(gray, 'Time'+str(ti.time()-A), (10,300), font, 1, (179, 255, 255), 2, cv2.LINE_AA)
+    #cv2.putText(gray, 'Time'+str(ti.time()-A), (10,300), font, 1, (179, 255, 255), 2, cv2.LINE_AA)
     cv2.imshow('Video', gray)
-
+    #ti.sleep(2)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

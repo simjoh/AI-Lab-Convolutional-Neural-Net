@@ -1,3 +1,3 @@
 Start webcam capture with:
 
-python .\facetracking.py .\haarcascade_frontalface_alt2.xml smile
+python .\faceWebCam\facetracking.py .\faceWebCam\haarcascade_frontalface_default.xml
